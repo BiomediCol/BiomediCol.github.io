@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioMedico Virtual</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+    <button id="toggle-theme-btn" class="theme-toggle-btn">☀️</button>
+    <div class="gradient-background"></div>
+    <div class="top-image-container"></div>
+
+    <div id="login-page-container" class="main-login-content">
+        <div class="left-column">
+            <img src="logo.png" alt="Logo de la aplicación" class="app-logo">
+            <img src="Avatar.png" alt="Imagen decorativa" class="decorative-image">
+        </div>
+        <div class="right-column">
+            <div class="login-container">
+                <h2>INICIAR SESIÓN</h2>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="username">USUARIO</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">CLAVE</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit">ENTRAR</button>
+                </form>
+            </div>
+            <a href="https://biomedicovirtualcol.wixsite.com/biomedicovirtual" target="_blank" class="website-button">Visita nuestra web</a>
+        </div>
+    </div>
+
+    <div id="app-main-container" class="report-container" style="display: none;">
+        <h1>Reporte de Servicio</h1>
+        <form id="report-form">
+            <div class="form-section">
+                <h2>Equipo</h2>
+                <div class="input-with-button">
+                    <input type="text" id="equipment-name" class="text-input" placeholder="Nombre del Equipo">
+                    <button type="button" class="clear-btn">Borrar</button>
+                </div>
+            </div>
+            <div class="form-section">
+                <h2>Marca</h2>
+                <div class="input-with-button">
+                    <input type="text" id="equipment-brand" class="text-input" placeholder="Marca del Equipo">
+                    <button type="button" class="clear-btn">Borrar</button>
+                </div>
+            </div>
+            <div class="form-section">
+                <h2>Modelo</h2>
+                <div class="input-with-button">
+                    <input type="text" id="equipment-model" class="text-input" placeholder="Modelo del Equipo">
+                    <button type="button" class="clear-btn">Borrar</button>
+                </div>
+            </div>
+            <div class="form-section">
+                <h2>Serie</h2>
+                <div class="input-with-button">
+                    <input type="text" id="equipment-serial" class="text-input" placeholder="Serie del Equipo">
+                    <button type="button" class="clear-btn">Borrar</button>
+                </div>
+            </div>
+            <div class="form-section">
+                <h2>ID</h2>
+                <div class="input-with-button">
+                    <input type="text" id="equipment-id" class="text-input" placeholder="ID del Equipo">
+                    <button type="button" class="clear-btn">Borrar</button>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>Fecha y hora de solicitud</h2>
+                <div class="input-with-button">
+                    <input type="datetime-local" id="request-date" class="date-input">
+                    <button type="button" class="clear-btn">Borrar</button>
+                </div>
+            </div>
+            <div class="form-section">
+                <h2>Falla reportada</h2>
+                <div class="textarea-with-buttons">
+                    <textarea id="reported-failure" class="textarea-input" placeholder="Descripción de la falla..."></textarea>
+                    <div class="voice-btn-container">
+                        <button type="button" class="voice-btn" data-target="reported-failure">🎤 Dictar</button>
+                        <button type="button" class="clear-btn">Borrar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="form-section">
+                <h2>Tipo de servicio</h2>
+                <div class="input-with-button">
+                    <select id="service-type" class="select-input">
+                        <option value="">Seleccione...</option>
+                        <option value="Correctivo">Correctivo</option>
+                        <option value="Preventivo">Preventivo</option>
+                    </select>
+                    <button type="button" class="clear-btn">Borrar</button>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>¿Quién reporta?</h2>
+                <div class="input-with-button">
+                    <input type="text" id="reporter-name" class="text-input" placeholder="Nombre del reportante">
+                    <button type="button" class="clear-btn">Borrar</button>
+                </div>
+            </div>
+            <div class="form-section">
+                <h2>Cargo</h2>
+                <div class="input-with-button">
+                    <input type="text" id="reporter-position" class="text-input" placeholder="Cargo del reportante">
+                    <button type="button" class="clear-btn">Borrar</button>
+                </div>
+            </div>
+            <div class="form-section">
+                <h2>Área</h2>
+                <div class="input-with-button">
+                    <input type="text" id="reporter-area" class="text-input" placeholder="Área del reportante">
+                    <button type="button" class="clear-btn">Borrar</button>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>Fecha y hora de inicio</h2>
+                <div class="input-with-button">
+                    <input type="datetime-local" id="start-date" class="date-input">
+                    <button type="button" class="clear-btn">Borrar</button>
+                </div>
+            </div>
+            <div class="form-section">
+                <h2>Descripción del servicio</h2>
+                <div class="textarea-with-buttons">
+                    <textarea id="service-description" class="textarea-input" placeholder="Descripción del servicio..."></textarea>
+                    <div class="voice-btn-container">
+                        <button type="button" class="voice-btn" data-target="service-description">🎤 Dictar</button>
+                        <button type="button" class="clear-btn">Borrar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="form-section">
+                <h2>Estado final del equipo</h2>
+                <div class="input-with-button">
+                    <select id="final-status" class="select-input">
+                        <option value="">Seleccione...</option>
+                        <option value="Operativo">Equipo Operativo</option>
+                        <option value="Semi Operativo">Equipo Semi Operativo</option>
+                        <option value="Fuera de Servicio">Equipo Fuera de Servicio</option>
+                    </select>
+                    <button type="button" class="clear-btn">Borrar</button>
+                </div>
+            </div>
+            <div class="form-section">
+                <h2>Fecha y hora Final</h2>
+                <div class="input-with-button">
+                    <input type="datetime-local" id="end-date" class="date-input">
+                    <button type="button" class="clear-btn">Borrar</button>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>Repuestos</h2>
+                <div id="spare-parts-list">
+                    <div class="spare-part-group">
+                        <input type="text" class="spare-part-name" placeholder="Nombre del repuesto">
+                        <select class="spare-part-status">
+                            <option value="Instalado">Instalado</option>
+                            <option value="Requerido">Requerido</option>
+                        </select>
+                        <input type="number" class="spare-part-quantity" placeholder="Cantidad">
+                    </div>
+                    <div class="spare-part-group">
+                        <input type="text" class="spare-part-name" placeholder="Nombre del repuesto">
+                        <select class="spare-part-status">
+                            <option value="Instalado">Instalado</option>
+                            <option value="Requerido">Requerido</option>
+                        </select>
+                        <input type="number" class="spare-part-quantity" placeholder="Cantidad">
+                    </div>
+                    <div class="spare-part-group">
+                        <input type="text" class="spare-part-name" placeholder="Nombre del repuesto">
+                        <select class="spare-part-status">
+                            <option value="Instalado">Instalado</option>
+                            <option value="Requerido">Requerido</option>
+                        </select>
+                        <input type="number" class="spare-part-quantity" placeholder="Cantidad">
+                    </div>
+                    <div class="spare-part-group">
+                        <input type="text" class="spare-part-name" placeholder="Nombre del repuesto">
+                        <select class="spare-part-status">
+                            <option value="Instalado">Instalado</option>
+                            <option value="Requerido">Requerido</option>
+                        </select>
+                        <input type="number" class="spare-part-quantity" placeholder="Cantidad">
+                    </div>
+                    <div class="spare-part-group">
+                        <input type="text" class="spare-part-name" placeholder="Nombre del repuesto">
+                        <select class="spare-part-status">
+                            <option value="Instalado">Instalado</option>
+                            <option value="Requerido">Requerido</option>
+                        </select>
+                        <input type="number" class="spare-part-quantity" placeholder="Cantidad">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>Subir Imágenes</h2>
+                <label for="image-upload-1" class="upload-label">Seleccionar Imagen 1</label>
+                <input type="file" id="image-upload-1" class="image-upload" accept="image/*">
+                <label for="image-upload-2" class="upload-label">Seleccionar Imagen 2</label>
+                <input type="file" id="image-upload-2" class="image-upload" accept="image/*">
+            </div>
+
+            <div class="signatures-section">
+                <div class="signature-box">
+                    <p>Firma Cliente</p>
+                    <canvas id="customer-signature" width="300" height="150"></canvas>
+                </div>
+                <div class="signature-box">
+                    <p>Firma Técnico</p>
+                    <canvas id="technician-signature" width="300" height="150"></canvas>
+                </div>
+                <div class="signature-box">
+                    <p>Firma de Aprobación</p>
+                    <canvas id="approval-signature" width="300" height="150"></canvas>
+                </div>
+            </div>
+
+            <div class="button-container">
+                <button type="submit" id="save-report-btn" class="submit-btn save-btn">Guardar Reporte</button>
+                <a href="#" id="manage-reports-btn" class="submit-btn manage-btn">Gestionar Reportes</a>
+            </div>
+        </form>
+    </div>
+
+    <script src="theme.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
