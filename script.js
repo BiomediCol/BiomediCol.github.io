@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const loginContainer = document.getElementById('login-page-container');
     const appContainer = document.getElementById('app-main-container');
 
-    // Handle the login form submission
+    // Manejar el evento de envío del formulario de login
     loginForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const username = document.getElementById('username').value;
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Functionality to clear fields with a button
+    // Funcionalidad para borrar campos con un botón al lado
     document.querySelectorAll('.clear-btn').forEach(button => {
         button.addEventListener('click', (e) => {
             const inputGroup = e.target.closest('.input-with-button') || e.target.closest('.textarea-with-buttons');
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Functionality to save on Enter key press
+    // Funcionalidad para guardar con la tecla Enter
     document.querySelectorAll('input, select, textarea').forEach(input => {
         input.addEventListener('keypress', (e) => {
             if (e.key === 'Enter') {
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Voice recognition functionality
+    // Funcionalidad de reconocimiento de voz
     if ('webkitSpeechRecognition' in window) {
         const recognition = new webkitSpeechRecognition();
         recognition.continuous = false;
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Logic to save the report (when the button is pressed)
+    // Lógica para guardar el reporte (al presionar el botón)
     const saveReportBtn = document.getElementById('save-report-btn');
     saveReportBtn.addEventListener('click', (e) => {
         e.preventDefault();
